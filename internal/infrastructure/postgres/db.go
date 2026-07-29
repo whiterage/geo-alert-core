@@ -3,6 +3,9 @@ package postgres
 import (
 	"database/sql"
 	"fmt"
+
+	// Registers the "postgres" driver used by sql.Open below.
+	_ "github.com/lib/pq"
 )
 
 func NewDB(dsn string) (*sql.DB, error) {
